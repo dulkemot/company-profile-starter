@@ -30,7 +30,7 @@ npm run build # output dist/
 ## Kenapa template ini
 
 - 1 file data = seluruh katalog, mudah diupdate non-dev
-- Static = cepat di HP, murah hosting, SEO oke
+- Static = cepat di HP, ukuran kecil, SEO oke
 - Disanitasi dari project client nyata (APN) — aman untuk publik
 
 MIT — dulkemot 2026
