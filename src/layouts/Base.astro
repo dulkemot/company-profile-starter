@@ -1,5 +1,6 @@
 ---
 const { title="Company Profile Starter", active="beranda" } = Astro.props;
+import { base } from '../data/site.js';
 ---
 <html lang="id"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>{title}</title>
@@ -44,11 +45,11 @@ footer{background:#081A30;color:#9FB4CE;padding:38px 36px;display:grid;grid-temp
 <body><div class="page">
 <slot name="hero" />
 {active !== 'beranda' && (
-<header class="site"><a href="/"><img src="/logo.svg" alt="Contoh Niaga" style="height:36px" /></a>
-<nav><a href="/" class={active==='beranda'?'on':''}>Beranda</a><a href="/produk" class={active==='produk'?'on':''}>Produk</a><a href="/kegiatan-event" class={active==='kegiatan'?'on':''}>Kegiatan & Event</a><a href="/kontak" class={active==='kontak'?'on':''}>Kontak</a></nav>
-<a class="btn" href="/kontak">Minta Penawaran →</a></header>
+<header class="site"><a href={`${base}/`}><img src={`${base}/logo.svg`} alt="Contoh Niaga" style="height:36px" /></a>
+<nav><a href={`${base}/`} class={active==='beranda'?'on':''}>Beranda</a><a href={`${base}/produk`} class={active==='produk'?'on':''}>Produk</a><a href={`${base}/kegiatan-event`} class={active==='kegiatan'?'on':''}>Kegiatan & Event</a><a href={`${base}/kontak`} class={active==='kontak'?'on':''}>Kontak</a></nav>
+<a class="btn" href={`${base}/kontak`}>Minta Penawaran →</a></header>
 )}
 <slot />
-<footer><div><b style="color:#fff">PT Contoh Niaga</b><br/>Jl. Contoh No. 1, Contoh Kota<br/>© 2026</div><div><b style="color:#fff">Layanan</b><br/>Distribusi FMCG<br/>Merchandising</div><div><b style="color:#fff">Operasional</b><br/>Senin–Sabtu 08.00–17.00<br/><br/><a class="btn" href="/kontak">Minta Penawaran →</a></div></footer>
+<footer><div><b style="color:#fff">PT Contoh Niaga</b><br/>Jl. Contoh No. 1, Contoh Kota<br/>© 2026</div><div><b style="color:#fff">Layanan</b><br/>Distribusi FMCG<br/>Merchandising</div><div><b style="color:#fff">Operasional</b><br/>Senin–Sabtu 08.00–17.00<br/><br/><a class="btn" href={`${base}/kontak`}>Minta Penawaran →</a></div></footer>
 <a class="wa-float" href="https://wa.me/6281234567890?text=Halo%20Contoh%20Niaga,%20saya%20mau%20tanya%20penawaran." target="_blank" rel="noopener" aria-label="Chat WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.5 4.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.4 0-2.8-.4-4-1.1l-.3-.2-4.6 1.2 1.2-4.5-.2-.3c-.8-1.2-1.2-2.6-1.2-4.1 0-4.9 4-8.8 8.9-8.8s9.1 4 9.1 8.9-4 8.9-8.9 8.9zm5-6.6c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.4.3-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2-.2-.3 0-.4.1-.6l.5-.6c.1-.2.2-.4.3-.6.1-.2 0-.4 0-.5L13.4 10c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.2-.9.5-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.8 5 .8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-1 2.4-1.9.3-.9.3-1.6.2-1.9-.1-.2-.3-.3-.6-.4z"/></svg></a>
 </div></body></html>

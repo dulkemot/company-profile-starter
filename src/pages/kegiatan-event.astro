@@ -1,10 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import { base } from '../data/site.js';
 const events = [
-["Gathering Tahunan","Kebersamaan seluruh divisi — dokumentasi gathering.","/img/event1.jpg"],
-["Demo Produk","Kerja sama dengan brand — demo ke masyarakat.","/img/event2.jpg"],
-["Pelatihan Sales","Asah kemampuan, mental, dan kepercayaan diri sales.","/img/sales.jpg"],
-["Operasional Gudang","Bongkar-muat 2 shift setiap hari.","/img/warehouse.jpg"]];
+["Gathering Tahunan","Kebersamaan seluruh divisi — dokumentasi gathering.",`${base}/img/event1.jpg`],
+["Demo Produk","Kerja sama dengan brand — demo ke masyarakat.",`${base}/img/event2.jpg`],
+["Pelatihan Sales","Asah kemampuan, mental, dan kepercayaan diri sales.",`${base}/img/sales.jpg`],
+["Operasional Gudang","Bongkar-muat 2 shift setiap hari.",`${base}/img/warehouse.jpg`]];
 ---
 <Base title="Kegiatan & Event — Starter" active="kegiatan">
 <div class="topbar"><span>STARTER</span><span>DOKUMENTASI EVENT</span></div>
