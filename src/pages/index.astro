@@ -4,7 +4,7 @@ import { brands, site } from '../data/site.js';
 ---
 <Base title={`${site.company} — ${site.tagline}`} active="beranda">
 <div class="hero-video" slot="hero">
-<video autoplay muted loop playsinline poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='720'%3E%3Crect width='1280' height='720' fill='%23071627'/%3E%3C/svg%3E"><source src="/hero.mp4" type="video/mp4" /></video>
+<video autoplay muted loop playsinline poster="/img/hero-poster.jpg"><source src="/hero.mp4" type="video/mp4" /></video>
 <div class="scrim"></div>
 <div class="top mono"><span>{site.company} — SEJAK 1985</span><span>{site.address}</span></div>
 <div class="nav2"><b style="color:#fff">Contoh Niaga</b><div class="links"><a class="on" href="/">Beranda</a><a href="/produk">Produk</a><a href="/kegiatan-event">Kegiatan & Event</a><a href="/kontak">Kontak</a></div><a class="btn" href="/kontak">Minta Penawaran →</a></div>
@@ -16,13 +16,13 @@ import { brands, site } from '../data/site.js';
 </div>
 <div class="side-card" style="background:#F8FAFE;border-radius:18px;padding:20px;max-width:380px;justify-self:end;color:#0F2340"><div class="mono" style="font-size:11px;color:#1756A6">{site.company}</div><div>Gudang pusat — Contoh Kota</div><div>Operasional — {site.hours}</div></div>
 </div></div>
-<div class="logo-marquee"><div class="logo-track">{brands.concat(brands).map(([n,src]) => <img src={src} alt={n} loading="lazy" />)}</div></div>
+<div class="logo-marquee"><div class="logo-track">{brands.concat(brands).map((n) => <span class="brand-pill">{n}</span>)}</div></div>
 <div class="sec white"><div class="mono" style="color:#1756A6;font-weight:800;font-size:12px">LAYANAN OPERASIONAL</div>
 <h2 style="font-size:36px;margin:8px 0">Operasional yang bisa dicek ke gudang.</h2>
 <div class="grid4">
-<div class="card"><div class="t"><b>Team Sales</b><div>Kunjungan harian + merchandising.</div></div></div>
-<div class="card"><div class="t"><b>Gudang Terpusat</b><div>Bongkar-muat 2 shift.</div></div></div>
-<div class="card"><div class="t"><b>Ribuan Outlet</b><div>Warung sampai modern outlet.</div></div></div>
-<div class="card"><div class="t"><b>Armada</b><div>Box, engkel, motor sales.</div></div></div>
+<div class="card"><img src="/img/sales.jpg" alt="Team Sales" loading="lazy" /><div class="t"><b>Team Sales</b><div>Kunjungan harian + merchandising.</div></div></div>
+<div class="card"><img src="/img/warehouse.jpg" alt="Gudang" loading="lazy" /><div class="t"><b>Gudang Terpusat</b><div>Bongkar-muat 2 shift.</div></div></div>
+<div class="card"><img src="/img/outlet.jpg" alt="Outlet" loading="lazy" /><div class="t"><b>Ribuan Outlet</b><div>Warung sampai modern outlet.</div></div></div>
+<div class="card"><img src="/img/armada.jpg" alt="Armada" loading="lazy" /><div class="t"><b>Armada</b><div>Box, engkel, motor sales.</div></div></div>
 </div></div>
 </Base>
