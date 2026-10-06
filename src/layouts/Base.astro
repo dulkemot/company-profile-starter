@@ -3,7 +3,7 @@ const { title="Company Profile Starter", active="beranda" } = Astro.props;
 ---
 <html lang="id"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>{title}</title>
-<style>
+<style is:global>
 *{box-sizing:border-box}body{margin:0;background:#071627;color:#0F2340;font-family:Inter,'Segoe UI',system-ui,Arial}
 .mono{font-family:ui-monospace,Menlo,Consolas,monospace}
 .page{max-width:1360px;margin:0 auto;background:#F2F6FC;min-height:100vh}
