@@ -6,7 +6,7 @@ const { title="Company Profile Starter", active="beranda" } = Astro.props;
 <style is:global>
 *{box-sizing:border-box}body{margin:0;background:#071627;color:#0F2340;font-family:Inter,'Segoe UI',system-ui,Arial}
 .mono{font-family:ui-monospace,Menlo,Consolas,monospace}
-.page{max-width:1360px;margin:0 auto;background:#F2F6FC;min-height:100vh}
+.page{margin:0;background:#F2F6FC;min-height:100vh}
 .topbar{background:#0B2545;color:#BFD2EC;font-size:12px;display:flex;justify-content:space-between;padding:9px 32px}
 header.site{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 32px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid #D6E2F2}
 header.site img{height:36px}
@@ -16,7 +16,7 @@ nav{display:flex;gap:22px;font-size:14px;font-weight:700}nav a{color:#0F2340;tex
 .hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,22,39,.92),rgba(7,22,39,.65) 40%,rgba(7,22,39,.15) 70%),linear-gradient(0deg,rgba(7,22,39,.8),transparent 35%)}
 .hero-video .top{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;padding:12px 36px;font-size:12px;color:#C9D6E8}
-.hero-video .nav2{position:absolute;top:44px;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:14px 36px}
+.hero-video .nav2{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:14px 36px}
 .hero-video .nav2 img{height:38px;background:transparent;border:1.5px solid rgba(255,255,255,.95);border-radius:10px;padding:5px 10px}
 .hero-video .links a{color:#fff}
 .hero-video .nav2 .links{display:flex;gap:26px;font-size:14px;font-weight:600;align-items:center}
