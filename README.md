@@ -33,4 +33,9 @@ npm run build # output dist/
 - Static = cepat di HP, ukuran kecil, SEO oke
 - Disanitasi dari project client nyata (APN) — aman untuk publik
 
+## Kredit aset
+
+- Foto: Unsplash (https://unsplash.com) — lisensi gratis untuk komersial, tanpa atribusi wajib. File di `public/img/`.
+- Video hero: Pexels (https://www.pexels.com) — lisensi gratis untuk komersial. File `public/hero.mp4`.
+
 MIT — dulkemot 2026
