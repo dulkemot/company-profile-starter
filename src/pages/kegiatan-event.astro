@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+const events = [
+["Gathering Tahunan","Kebersamaan seluruh divisi.","https://via.placeholder.com/600x300?text=Event+1"],
+["Demo Produk","Kerja sama dengan brand.","https://via.placeholder.com/600x300?text=Event+2"],
+["Pelatihan Sales","Asah kemampuan sales.","https://via.placeholder.com/600x300?text=Event+3"]];
+---
+<Base title="Kegiatan & Event — Starter" active="kegiatan">
+<div class="topbar"><span>STARTER</span><span>DOKUMENTASI EVENT</span></div>
+<div class="sec white"><div class="mono" style="color:#1756A6;font-weight:800">ACARA & KEGIATAN</div>
+<h1 style="font-size:48px;margin:8px 0">Kebersamaan dalam mencapai tujuan.</h1>
+<div class="grid3">{events.map(([t,d,img]) => (
+<div class="card"><img src={img} alt={t} loading="lazy" /><div class="t"><b>{t}</b><p style="color:#5A6E8A;font-size:14px">{d}</p></div></div>))}</div>
+</div>
+</Base>

@@ -1,0 +1,46 @@
+---
+const { title="Company Profile Starter", active="beranda" } = Astro.props;
+---
+<html lang="id"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>{title}</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#071627;color:#0F2340;font-family:Inter,'Segoe UI',system-ui,Arial}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+.page{max-width:1360px;margin:0 auto;background:#F2F6FC;min-height:100vh}
+.topbar{background:#0B2545;color:#BFD2EC;font-size:12px;display:flex;justify-content:space-between;padding:9px 32px}
+header.site{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 32px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid #D6E2F2}
+header.site img{height:36px}
+nav{display:flex;gap:22px;font-size:14px;font-weight:700}nav a{color:#0F2340;text-decoration:none;opacity:.75}nav a.on{opacity:1;color:#1756A6;border-bottom:3px solid #FF8A00;padding-bottom:3px}
+.btn{background:#FF8A00;color:#13100A;font-weight:800;padding:11px 20px;border-radius:10px;border:none;text-decoration:none;display:inline-block}
+.hero-video{position:relative;height:92vh;min-height:620px;overflow:hidden;background:#071627;color:white}
+.hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,22,39,.92),rgba(7,22,39,.65) 40%,rgba(7,22,39,.15) 70%),linear-gradient(0deg,rgba(7,22,39,.8),transparent 35%)}
+.hero-video .top{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;padding:12px 36px;font-size:12px;color:#C9D6E8}
+.hero-video .nav2{position:absolute;top:44px;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:14px 36px}
+.hero-video .nav2 img{height:38px;background:transparent;border:1.5px solid rgba(255,255,255,.95);border-radius:10px;padding:5px 10px}
+.hero-video .links a{color:#fff}
+.hero-content{position:absolute;z-index:4;left:36px;right:36px;bottom:80px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:end}
+h1{font-size:62px;line-height:.95;letter-spacing:-.04em;margin:16px 0}.hl{background:#FF8A00;color:#13100A;padding:0 10px;display:inline-block;transform:rotate(-1deg)}
+.lead{color:#D3DEEF;max-width:54ch;line-height:1.6}
+.logo-marquee{background:#fff;border-top:3px solid #FF8A00;padding:14px 0;overflow:hidden}
+.logo-track{display:flex;gap:16px;width:max-content;animation:slide 30s linear infinite;align-items:center}
+.logo-track img{height:70px;border:1px solid #DCE6F3;border-radius:14px;padding:6px 10px;background:#fff;object-fit:contain}
+@keyframes slide{to{transform:translateX(-50%)}}
+.sec{padding:52px 36px}.white{background:#fff}.soft{background:#F2F6FC}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.card{border-radius:18px;overflow:hidden;border:1px solid #DCE6F3;background:#fff}.card img{width:100%;height:165px;object-fit:cover;display:block}.card .t{padding:16px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:10px}th,td{text-align:left;padding:9px 10px;border-top:1px solid #E3EAF5}th{background:#EFF4FB}
+footer{background:#081A30;color:#9FB4CE;padding:38px 36px;display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:20px;font-size:14px}
+@media(max-width:900px){.hero-content{grid-template-columns:1fr}h1{font-size:40px}nav{display:none}.grid4,.grid3,footer{grid-template-columns:1fr 1fr}.sec{padding:32px 20px}}
+</style></head>
+<body><div class="page">
+<slot name="hero" />
+{active !== 'beranda' && (
+<header class="site"><a href="/"><b>Contoh Niaga</b></a>
+<nav><a href="/" class={active==='beranda'?'on':''}>Beranda</a><a href="/produk" class={active==='produk'?'on':''}>Produk</a><a href="/kegiatan-event" class={active==='kegiatan'?'on':''}>Kegiatan & Event</a><a href="/kontak" class={active==='kontak'?'on':''}>Kontak</a></nav>
+<a class="btn" href="/kontak">Minta Penawaran →</a></header>
+)}
+<slot />
+<footer><div><b style="color:#fff">PT Contoh Niaga</b><br/>Jl. Contoh No. 1, Contoh Kota<br/>© 2026</div><div><b style="color:#fff">Layanan</b><br/>Distribusi FMCG<br/>Merchandising</div><div><b style="color:#fff">Operasional</b><br/>Senin–Sabtu 08.00–17.00<br/><br/><a class="btn" href="/kontak">Minta Penawaran →</a></div></footer>
+</div></body></html>

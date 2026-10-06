@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { produk } from '../data/site.js';
+---
+<Base title="Produk — Starter" active="produk">
+<div class="topbar"><span>COMPANY PROFILE STARTER</span><span>HARGA UPDATE MANUAL</span></div>
+<div class="sec white"><div class="mono" style="color:#1756A6;font-weight:800">PRODUK</div>
+<h1 style="font-size:48px;margin:8px 0">Pilihan beragam, harga kompetitif.</h1>
+<p>Edit di <code>src/data/site.js</code> — tambah kategori cukup tambah object baru.</p>
+<div class="grid3">{produk.map(p => (
+<div class="card"><img src={p.img} alt={p.kat} loading="lazy" /><div class="t"><b>{p.kat}</b>
+<table><tr><th>Produk</th><th>Harga</th></tr>{p.items.map(([n,h]) => <tr><td>{n}</td><td>{h}</td></tr>)}</table>
+</div></div>))}</div>
+</div>
+</Base>
