@@ -1,5 +1,7 @@
 # Company Profile Starter — Astro Static
 
+🌐 **Live demo:** https://dulkemot.github.io/company-profile-starter/
+
 Starter company profile 4 halaman: beranda hero video, produk/katalog, kegiatan, kontak. Static output, tanpa backend/CMS.
 
 ![Astro](https://img.shields.io/badge/Astro-4BC0D8?style=for-the-badge&logo=astro&logoColor=white)
